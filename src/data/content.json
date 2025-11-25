@@ -1,0 +1,771 @@
+{
+  "site": {
+    "title": "Rio Gastronomia",
+    "description": "O maior evento de gastronomia do Brasil.",
+    "logoUrl": "logoRG_neg.png",
+    "footerLogoUrl": "logooglobo100.png",
+    "footerLabel": "Realização",
+    "legalNotice": "BEBA COM MODERAÇÃO. PRODUTO DESTINADO A MAIORES DE 18 ANOS"
+  },
+  "menu": [
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "Números",
+      "href": "#numeros"
+    },
+    {
+      "label": "Perfil de Público",
+      "href": "#perfil"
+    },
+    {
+      "label": "Prêmio",
+      "href": "#premio"
+    },
+    {
+      "label": "Auditórios",
+      "href": "#auditorios"
+    },
+    {
+      "label": "Estabelecimentos",
+      "href": "#restaurantes"
+    },
+    {
+      "label": "Produtores",
+      "href": "#produtores"
+    },
+    {
+      "label": "Infantil",
+      "href": "#infantil"
+    },
+    {
+      "label": "Shows",
+      "href": "#shows"
+    },
+    {
+      "label": "Ativações",
+      "href": "#ativacoes"
+    },
+    {
+      "label": "Divulgação",
+      "href": "#divulgacao"
+    },
+    {
+      "label": "Patrocinadores",
+      "href": "#patrocinadores"
+    }
+  ],
+  "hero": {
+    "id": "home",
+    "videoUrl": "https://player.vimeo.com/video/1136915104?badge=0&autopause=0&player_id=0&app_id=58479",
+    "title": "Rio Gastronomia 2024",
+    "backgroundClass": "bg-black"
+  },
+  "numbers": {
+    "id": "numeros",
+    "sectionTitle": "NÚMEROS",
+    "highlightTitle": "UMA EDIÇÃO PARA FICAR MARCADA!",
+    "introParagraphs": [
+      "Comidas deliciosas, música, brincadeira, aprendizado, bebidas para todos os gostos e um visual incrível do Rio de Janeiro. Misture tudo isso e está pronta a receita que fez a 14ª edição do Rio Gastronomia bater recorde de público e de vendas, atingindo números históricos com ingressos esgotados em vários dias.",
+      "Foram mais de 40 marcas envolvidas nesse grande sucesso, que já entrou para o calendário carioca.",
+      "E durante doze dias, o maior evento gastronômico do país reuniu + de 125 mil apaixonados pela gastronomia no Jockey Club Brasileiro."
+    ],
+    "metrics": [
+      {
+        "value": "+ de 130 mil",
+        "label": "visitantes"
+      },
+      {
+        "value": "+ de 200 milhões",
+        "label": "de pessoas impactadas"
+      },
+      {
+        "value": "+ de 316",
+        "label": "comidinhas nos cardápios"
+      },
+      {
+        "value": "+ de 55",
+        "label": "chefs e especialistas convidados"
+      },
+      {
+        "value": "+ de 36",
+        "label": "estabelecimentos gastronômicos"
+      },
+      {
+        "value": "+ de 40 mil",
+        "label": "metros quadrados de área ao ar livre"
+      },
+      {
+        "value": "+ de 9.5 mil",
+        "label": "pessoas na roda-gigante Président, Light e Rio Jogos"
+      },
+      {
+        "value": "+ de 4.2 mil",
+        "label": "pessoas na Tirolesa Claro"
+      },
+      {
+        "value": "+ de 35",
+        "label": "aulas no auditório SESC | SENAC"
+      },
+      {
+        "value": "+ de 1.1070",
+        "label": "crianças no Espaço Kids Alfa CEM"
+      },
+      {
+        "value": "+ de 570 mil",
+        "label": "itens vendidos"
+      }
+    ]
+  },
+  "audience": {
+    "id": "perfil",
+    "sectionTitle": "PERFIL DE PÚBLICO",
+    "items": [
+      {
+        "icon": "iconpbl1.png",
+        "title": "99",
+        "description": "Pontuação do NPS"
+      },
+      {
+        "icon": "iconpbl3.png",
+        "title": "Faixa Etária",
+        "description": "17 ou menos – 4%\n18 a 25 anos – 14%\n26 a 35 anos – 32%\n36 a 45 anos – 29%\n46 a 55 anos – 15%\n+56 anos – 7%"
+      },
+      {
+        "icon": "iconpbl2.png",
+        "title": "67%",
+        "description": "Com graduação, pós-graduação ou mestrado/doutorado"
+      },
+      {
+        "icon": "iconpbl5.png",
+        "title": "Renda",
+        "description": "Entre 4 a 8 salários mínimos - 29% \n\n Acima de 10 salários mínimos - 14%"
+      },
+      {
+        "icon": "iconpbl6.png",
+        "title": "Perfil",
+        "description": "FEMININO - 65% \n MASCULINO - 34%"
+      }
+    ]
+  },
+  "awards": {
+    "id": "premio",
+    "sectionTitle": "PRÊMIO RIO SHOW DE GASTRONOMIA",
+    "paragraphs": [
+      "O Prêmio Rio Show de Gastronomia celebra o melhor da mesa carioca em 18 categorias. Em 2024 contou ainda com uma homenagem especial a Confeitaria Colombo. Chefs, cozinheiros, donos de bares, restaurantes e botecos se reuniram no gramado do Jockey, para prestigiar os melhores da cidade. Eles são as estrelas do nosso evento!",
+      "Vencedores por categoria:",
+      "Chef: João Paulo Frankenfeld (CASA 201)\nChef Revelação: Vanessa Rocha (MARIA E BOI)\nAsiático: Si-chou\nContemporâneo: LASAI\nFrancês: Didier\nPortuguês: Gajos d'Ouro\nItaliano: CIPRIANI\nCarne: Giuseppe Grill\nBoteco: SURU BAR\nPeixes e frutos do mar: Satyricon\nPizza: FERRO & FARINHA\nConfeitaria: Absurda\nCusto-benefício: ToTo\nBar: NOSSO\nVegetariano: Brota\nJaponês: San Omakase\nCafé da manhã: DAINER\nBrasileiro: SOFIA",
+      "PRÊMIO ESPECIAL 100 ANOS: CONFEITARIA COLOMBO"
+    ],
+    "images": [
+      "premiacao1.png",
+      "premiacao2.png"
+    ]
+  },
+  "auditoriums": {
+    "id": "auditorios",
+    "sectionTitle": "AUDITÓRIOS",
+    "name": "SENAC",
+    "description": "Com capacidade para 100 pessoas e curadoria da jornalista Luciana Fróes, o auditório SENAC reuniu grandes nomes do país para aulas concorridas, cheias de dicas e conteúdos incríveis.",
+    "items": [
+      {
+        "images": [
+          "senac1.png",
+          "senac2.png",
+          "senac3.png",
+          "senac4.png",
+          "senac5.png",
+          "senac6.png"
+        ]
+      }
+    ]
+  },
+  "establishments": {
+    "id": "restaurantes",
+    "sectionTitle": "ESTABELECIMENTOS",
+    "intro": "Foram mais de 35 estabelecimentos gastronômicos selecionados, reunindo o melhor da gastronomia do país. Uma oportunidade única para o público conhecer e degustar algumas das receitas mais famosas da cidade.",
+    "accordion": [
+      {
+        "title": "RESTAURANTES",
+        "columns": [
+          [
+            "Absurda Confeitaria",
+            "Assunção",
+            "Babbo Osteria",
+            "Baduk",
+            "Baixela",
+            "Bar do Momo",
+            "Bistrô Sesc",
+            "Bistrogro",
+            "Casa Villarino Senac",
+            "Dom Costela",
+            "Empório Jardim",
+            "Fairmont Rio",
+            "Gajos D’Ouro",
+            "Gero",
+            "Giuseppe Grill",
+            "Grupo Irajá – Pedro De Artagão",
+            "Haru Sushi"
+          ],
+          [
+            "Heaven Cucina",
+            "Izär",
+            "Lasai",
+            "Lima Cocina Peruana",
+            "Maguje",
+            "Mee",
+            "Noa",
+            "Officina Local",
+            "Pescados na Brasa",
+            "Rancho Português",
+            "Rocka Búzios",
+            "Ruda",
+            "San",
+            "Tasquinha do Portuga",
+            "Tin Tin",
+            "Vulcano",
+            "Yayá Comidaria"
+          ]
+        ],
+        "images": [
+          "restaurante1.png",
+          "restaurante2.png",
+          "restaurante3.png",
+          "restaurante4.png"
+        ]
+      },
+      {
+        "title": "BIKES",
+        "columns": [
+          [
+            "Andorinha",
+            "Brownie Do Ton",
+            "Dogaria",
+            "Doutora Brownie",
+            "Garrafaria",
+            "Mia Cookies",
+            "Sandu-it"
+          ]
+        ],
+        "images": [
+          "bikes/foto1.webp",
+          "bikes/foto2.webp",
+          "bikes/foto3.webp",
+          "bikes/foto4.webp"
+        ]
+      }
+    ]
+  },
+  "producers": {
+    "id": "produtores",
+    "sectionTitle": "FEIRA DE PRODUTORES",
+    "intro": "A dica certa de achados para se deliciar ou presentear com muito sabor, e a oportunidade de conhecer de perto o que está sendo feito no estado do Rio. São cachaças, geleias, molhos, café, cogumelos, para você levar um pouquinho do evento para casa. Nesta edição a feira contou com 30 produtores.",
+    "columns": [
+      [
+        "Armazem Sustentável",
+        "Arte Em Conservas",
+        "Balas De Cocos Recheadas",
+        "Biroots",
+        "Biscotteria",
+        "Bom Doce",
+        "Budega",
+        "Cachaça Barra Velha",
+        "Cachaça Coqueiro",
+        "Cachaça Fazenda Soledade",
+        "Cachaça Magnífica",
+        "Cachaça Maxcana",
+        "Cachaça Reserva Do Nosco",
+        "Cachaça Sete Engenhos",
+        "Cachaça Tellura"
+      ],
+      [
+        "Cachaça Weneck",
+        "Capril Deville",
+        "Cazulu Cascudo",
+        "Cochon Rouge Charcuterie",
+        "Douçuras Da Suely",
+        "Dr. Cogumelo",
+        "Fazenda Boa Fé",
+        "Gastronomia Para Viagem",
+        "Grão Chocolates",
+        "Lemô Molhos",
+        "Mistura Fina",
+        "Sítio Solidão",
+        "Teu Doce",
+        "Zuca Salumeria"
+      ]
+    ],
+    "images": [
+      "produtor1.png",
+      "produtor2.png",
+      "produtor3.png",
+      "produtor4.png"
+    ]
+  },
+  "kids": {
+    "id": "infantil",
+    "sectionTitle": "ESPAÇO KIDS COLÉGIO pH",
+    "intro": "O Rio Gastronomia também é lugar de criança! Durante os dias de evento, a garotada pode brincar em um parquinho com brinquedos, games, cenários, recreação e oficinas diárias, oferecidas pela turma do Animasom. O cardápio da diversão incluiu recreadores que promoveram atividades super divertidas!",
+    "images": [
+      "kids1.png",
+      "kids2.png",
+      "kids3.png",
+      "kids4.png"
+    ]
+  },
+  "shows": {
+    "id": "shows",
+    "sectionTitle": "SHOWS - PALCO SESC",
+    "intro": "O palco Sesc, com 13 atrações ao longo dos 12 dias garantiu boa música e diversão no Rio Gastronomia.",
+    "items": [
+      {
+        "name": "NANDO REIS",
+        "image": "show-nandoreis.png"
+      },
+      {
+        "name": "FREJAT",
+        "image": "show-frejat.png"
+      },
+      {
+        "name": "FESTA PLOC",
+        "image": "show-festploc.png"
+      },
+      {
+        "name": "SAMBA QUE ELAS QUEREM",
+        "image": "show-sambaqueelasquerem.png"
+      },
+      {
+        "name": "TONI GARRIDO",
+        "image": "show-tonigarrido.png"
+      },
+      {
+        "name": "BLITZ",
+        "image": "show-blitz.png"
+      },
+      {
+        "name": "COZINHA ARRUMADA",
+        "image": "show-cozinhaarrumada.png"
+      },
+      {
+        "name": "MARIA RITA",
+        "image": "show-mariarita.png"
+      },
+      {
+        "name": "XANDE DE PILARES",
+        "image": "show-xandedepilares.png"
+      },
+      {
+        "name": "FICA COMIGO",
+        "image": "show-ficacomigo.png"
+      },
+      {
+        "name": "GRANDE RIO",
+        "image": "show-granderio.png"
+      },
+      {
+        "name": "SIBC",
+        "image": "show-sibc.png"
+      },
+      {
+        "name": "MARIANA AYDAR",
+        "image": "show-marianaaydar.png"
+      },
+      {
+        "name": "CAFE BOURBON",
+        "image": "show-cafebourbon.png"
+      },
+      {
+        "name": "DJ MARCELO LYRIO",
+        "image": "show-djmarcelo.png"
+      },
+      {
+        "name": "JAZZ DO TUNICO",
+        "image": "show-jazztunico.png"
+      },
+      {
+        "name": "LIZ ROSA",
+        "image": "show-lizrosa.png"
+      },
+      {
+        "name": "THAIS FEIJÃO",
+        "image": "show-thaisfeijao.png"
+      }
+    ]
+  },
+  "activations": {
+    "id": "ativacoes",
+    "sectionTitle": "ATIVAÇÕES E ESPAÇOS PROPRIETÁRIOS",
+    "intro": "Um evento da dimensão do Rio Gastronomia só é possível graças a um ingrediente muito especial: parcerias. E a diversidade de atividades e espaços do evento possibilitam ótimas oportunidades de ativações e espaços proprietários para os mais variados segmentos.",
+    "images": [
+      "ativacoes1.png",
+      "ativacoes2.png",
+      "ativacoes3.png",
+      "ativacoes4.png",
+      "ativacoes5.png",
+      "ativacoes6.png",
+      "ativacoes7.png",
+      "ativacoes8.png",
+      "ativacoes9.png",
+      "ativacoes10.png",
+      "ativacoes11.png",
+      "ativacoes12.png",
+      "ativacoes13.png",
+      "ativacoes14.png"
+    ]
+  },
+  "media": {
+    "id": "divulgacao",
+    "sectionTitle": "DIVULGAÇÃO",
+    "items": [
+      {
+        "title": "GRUPO GLOBO",
+        "hidden": false,
+        "body": "Foram + de 81 MM de impactos on e off nas publicações e impressões nos diversos veículos do Grupo Globo como: O Globo, Extra, Revista Ela, Valor Econômico, Jornais de Bairro, Casa e Jardim, Pegn, Marie Claire, Época Negócios e GQ."
+      },
+      {
+        "title": "TV Globo",
+        "hidden": true,
+        "body": "Ao longo das semanas do evento veiculamos mais de 28 inserções com um vídeo comercial de 30s segundos, praça RJ, nos programas de tv aberta: Bom Dia Brasil, Encontro, Caldeirão, RJ TV 1ª edição, É de Casa, RJ TV 2ª edição e Domingão. E na TV paga, foram mais de 30 inserções nos canais: SporTV, GNT, MultiShow e Globo News."
+      },
+      {
+        "title": "RÁDIOS",
+        "hidden": true,
+        "body": "Ocupamos a programação das rádios CBN com 76 inserções e Rádio Globo com 100 inserções durante quatro semanas de divulgação."
+      },
+      {
+        "title": "REDES SOCIAIS",
+        "hidden": false,
+        "body": "212 postagens nas redes sociais\n+ de 290 mil contas engajadas\n+ de 19 MM de impressões\nTotal seguidores: 142 mil seguidores no Instagram e 130 mil seguidores no Facebook."
+      },
+      {
+        "title": "MÍDIA EXTERIOR",
+        "hidden": true,
+        "body": "GALHARDETES: 55 unidades espalhadas nos postes das principais vias da cidade.\nELETROMÍDIA: 631 faces/telas dentre edifícios comerciais, tembici e bancas digitais durante 14 dias de divulgação."
+      },
+      {
+        "title": "MÍDIA ESPONTÂNEA",
+        "hidden": false,
+        "body": "A diversidade gastronômica e de conteúdo do evento proporciona uma grande reverberação. Ao todo foram 278 publicações e mais de 70 milhões em mídia espontânea (IMPRESSO, ONLINE, TV E RÁDIO). Presente em programas e telejornais como: RJ TV 1ª e 2ª edição, GloboNews, Bom Dia Rio, entre outros. Foram + de 248 Milhões de impactos."
+      }
+    ],
+    "images": [
+      "divulgacao1.png",
+      "divulgacao2.png",
+      "divulgacao3.png",
+      "divulgacao4.png",
+      "divulgacao5.png"
+    ]
+  },
+  "sponsors": {
+    "id": "patrocinadores",
+    "sectionTitle": "PATROCINADORES",
+    "blocks": [
+      {
+        "id": "chancela-master",
+        "label": "",
+        "items": [
+          {
+            "id": "rouanet",
+            "name": "rouanet.webp"
+          }
+        ]
+      },
+      {
+        "id": "apresentacao",
+        "label": "Apresentação",
+        "items": [
+          {
+            "id": "fecomercio",
+            "name": "fecomercio.webp"
+          }
+        ]
+      },
+      {
+        "id": "estado-anfitriao",
+        "label": "Estado Anfitrião",
+        "items": [
+          {
+            "id": "gov-rio",
+            "name": "gov-rio.webp"
+          }
+        ]
+      },
+      {
+        "id": "cidade-anfitria",
+        "label": "Cidade Anfitriã",
+        "items": [
+          {
+            "id": "pref-rio",
+            "name": "pref-rio.webp"
+          }
+        ]
+      },
+      {
+        "id": "patrocinio-master",
+        "label": "Patrocínio Master",
+        "items": [
+          {
+            "id": "naturgy",
+            "name": "naturgy.webp"
+          },
+          {
+            "id": "bb-visa",
+            "name": "bb-visa.webp"
+          },
+          {
+            "id": "visit-rio",
+            "name": "visit-rio.webp"
+          },
+          {
+            "id": "rio-livro",
+            "name": "rio-livro.webp"
+          }
+        ]
+      },
+      {
+        "id": "patrocinio",
+        "label": "Patrocínio",
+        "items": [
+          {
+            "id": "stella",
+            "name": "stella.webp"
+          },
+          {
+            "id": "maturatta",
+            "name": "maturatta.webp"
+          },
+          {
+            "id": "iprio",
+            "name": "iprio.webp"
+          },
+          {
+            "id": "ipiranga",
+            "name": "ipiranga.webp"
+          },
+          {
+            "id": "rio-cultura",
+            "name": "pref-rio-cultura.webp"
+          },
+          {
+            "id": "secec",
+            "name": "secec.webp"
+          }
+        ]
+      },
+      {
+        "id": "apoio",
+        "label": "Apoio",
+        "items": [
+          {
+            "id": "setur",
+            "name": "setur.webp"
+          },
+          {
+            "id": "rededor",
+            "name": "rededor.webp"
+          },
+          {
+            "id": "prezunic",
+            "name": "prezunic.webp"
+          },
+          {
+            "id": "garrafaria",
+            "name": "garrafaria.webp"
+          },
+          {
+            "id": "pouso-alto",
+            "name": "pouso-alto.webp"
+          },
+          {
+            "id": "chandon",
+            "name": "chandon.webp"
+          },
+          {
+            "id": "andorinha",
+            "name": "andorinha.webp"
+          },
+          {
+            "id": "president",
+            "name": "president.webp"
+          },
+          {
+            "id": "cielo",
+            "name": "cielo.webp"
+          },
+          {
+            "id": "britania",
+            "name": "britania.webp"
+          },
+          {
+            "id": "seara",
+            "name": "seara.webp"
+          },
+          {
+            "id": "amapa",
+            "name": "amapa.webp"
+          },
+          {
+            "id": "sebrae",
+            "name": "sebrae.webp"
+          },
+          {
+            "id": "tv-globo",
+            "name": "tv-globo.webp"
+          },
+          {
+            "id": "alfa-cem",
+            "name": "alfa-cem.webp"
+          },
+          {
+            "id": "embratur",
+            "name": "embratur.webp"
+          },
+          {
+            "id": "sul-america",
+            "name": "sul-america.webp"
+          },
+          {
+            "id": "enel",
+            "name": "enel.webp"
+          }
+        ]
+      },
+      {
+        "id": "participacao",
+        "label": "Participação",
+        "items": [
+          {
+            "id": "3-coracoes",
+            "name": "3-coracoes.webp"
+          },
+          {
+            "id": "granfino",
+            "name": "granfino.webp"
+          },
+          {
+            "id": "ion",
+            "name": "ion.webp"
+          },
+          {
+            "id": "granado",
+            "name": "granado.webp"
+          }
+        ]
+      },
+      {
+        "id": "shopping-oficial",
+        "label": "Shopping Oficial",
+        "items": [
+          {
+            "id": "riosul",
+            "name": "riosul.webp"
+          }
+        ]
+      },
+      {
+        "id": "cia-aerea-oficial",
+        "label": "Cia Aérea Oficial",
+        "items": [
+          {
+            "id": "gol",
+            "name": "gol.webp"
+          }
+        ]
+      },
+      {
+        "id": "hotel-oficial",
+        "label": "Hotel Oficial",
+        "items": [
+          {
+            "id": "fairmont",
+            "name": "fairmont.webp"
+          }
+        ]
+      },
+      {
+        "id": "energia-sustentavel",
+        "label": "Parceria de Energia Sustentável",
+        "items": [
+          {
+            "id": "tyr",
+            "name": "tyr.webp"
+          }
+        ]
+      },
+      {
+        "id": "parceria",
+        "label": "Parceria",
+        "items": [
+          {
+            "id": "sindrio",
+            "name": "sindrio.webp"
+          }
+        ]
+      },
+      {
+        "id": "producao",
+        "label": "Produção",
+        "items": [
+          {
+            "id": "rkf",
+            "name": "rkf.webp"
+          },
+          {
+            "id": "lanika",
+            "name": "lanika.webp"
+          }
+        ]
+      },
+      {
+        "id": "radio-oficial",
+        "label": "Rádio Oficial",
+        "items": [
+          {
+            "id": "radio-globo",
+            "name": "radio-globo.webp"
+          },
+          {
+            "id": "cbn",
+            "name": "cbn.webp"
+          }
+        ]
+      },
+      {
+        "id": "parceiro-midia",
+        "label": "Parceiro de Mídia",
+        "items": [
+          {
+            "id": "eletromidia",
+            "name": "eletromidia.webp"
+          }
+        ]
+      },
+      {
+        "id": "assessoria",
+        "label": "Assessoria",
+        "items": [
+          {
+            "id": "inpress",
+            "name": "inpress.webp"
+          }
+        ]
+      },
+      {
+        "id": "realizacao",
+        "label": "Realização",
+        "items": [
+          {
+            "id": "oglobo",
+            "name": "oglobo.webp"
+          },
+          {
+            "id": "brasil",
+            "name": "brasil.webp"
+          }
+        ]
+      }
+    ]
+  }
+}

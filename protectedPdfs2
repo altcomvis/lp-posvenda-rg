@@ -1,0 +1,247 @@
+[
+  {
+    "id": "",
+    "pdf": "/pdfs/rouanet.pdf",
+    "password": "rouanet2025"
+  },
+  {
+    "id": "fecomercio",
+    "pdf": "/pdfs/fecomercio.pdf",
+    "password": "fecomercio2025"
+  },
+  {
+    "id": "gov-rio",
+    "pdf": "/pdfs/gov-rio.pdf",
+    "password": "gov-rio2025"
+  },
+  {
+    "id": "pref-rio",
+    "pdf": "/pdfs/pref-rio.pdf",
+    "password": "pref-rio2025"
+  },
+  {
+    "id": "naturgy",
+    "pdf": "/pdfs/naturgy.pdf",
+    "password": "naturgy2025"
+  },
+  {
+    "id": "bb-visa",
+    "pdf": "/pdfs/bb-visa.pdf",
+    "password": "visa-bb2025"
+  },
+  {
+    "id": "visit-rio",
+    "pdf": "/pdfs/visit-rio.pdf",
+    "password": "visit-rio2025"
+  },
+  {
+    "id": "rio-livro",
+    "pdf": "/pdfs/rio-livro.pdf",
+    "password": "rio-livros2025"
+  },
+  {
+    "id": "stella",
+    "pdf": "/pdfs/stella.pdf",
+    "password": "stella2025"
+  },
+  {
+    "id": "maturatta",
+    "pdf": "/pdfs/maturatta.pdf",
+    "password": "maturatta2025"
+  },
+  {
+    "id": "iprio",
+    "pdf": "/pdfs/iprio.pdf",
+    "password": "iprio2025"
+  },
+  {
+    "id": "ipiranga",
+    "pdf": "/pdfs/ipiranga.pdf",
+    "password": "ipiranga2025"
+  },
+  {
+    "id": "rio-cultura",
+    "pdf": "/pdfs/rio-cultura.pdf",
+    "password": "rio-cultura2025"
+  },
+  {
+    "id": "secec",
+    "pdf": "/pdfs/secec.pdf",
+    "password": "secec2025"
+  },
+  {
+    "id": "setur",
+    "pdf": "/pdfs/setur.pdf",
+    "password": "setur2025"
+  },
+  {
+    "id": "rededor",
+    "pdf": "/pdfs/rededor.pdf",
+    "password": "rededor2025"
+  },
+  {
+    "id": "prezunic",
+    "pdf": "/pdfs/prezunic.pdf",
+    "password": "prezunic2025"
+  },
+  {
+    "id": "garrafaria",
+    "pdf": "/pdfs/garrafaria.pdf",
+    "password": "garrafaria2025"
+  },
+  {
+    "id": "pouso-alto",
+    "pdf": "/pdfs/pouso-alto.pdf",
+    "password": "pouso-alto2025"
+  },
+  {
+    "id": "chandon",
+    "pdf": "/pdfs/chandon.pdf",
+    "password": "chandon2025"
+  },
+  {
+    "id": "andorinha",
+    "pdf": "/pdfs/andorinha.pdf",
+    "password": "andorinha2025"
+  },
+  {
+    "id": "president",
+    "pdf": "/pdfs/president.pdf",
+    "password": "president2025"
+  },
+  {
+    "id": "cielo",
+    "pdf": "/pdfs/cielo.pdf",
+    "password": "cielo2025"
+  },
+  {
+    "id": "britania",
+    "pdf": "/pdfs/britania.pdf",
+    "password": "britania2025"
+  },
+  {
+    "id": "seara",
+    "pdf": "/pdfs/seara.pdf",
+    "password": "seara2025"
+  },
+  {
+    "id": "amapa",
+    "pdf": "/pdfs/amapa.pdf",
+    "password": "amapa2025"
+  },
+  {
+    "id": "sebrae",
+    "pdf": "/pdfs/sebrae.pdf",
+    "password": "sebrae2025"
+  },
+  {
+    "id": "tv-globo",
+    "pdf": "/pdfs/tv-globo.pdf",
+    "password": "tv-globo2025"
+  },
+  {
+    "id": "alfa-cem",
+    "pdf": "/pdfs/alfa-cem.pdf",
+    "password": "alfa-cem2025"
+  },
+  {
+    "id": "embratur",
+    "pdf": "/pdfs/embratur.pdf",
+    "password": "embratur2025"
+  },
+  {
+    "id": "sul-america",
+    "pdf": "/pdfs/sul-america.pdf",
+    "password": "sul-america2025"
+  },
+  {
+    "id": "enel",
+    "pdf": "/pdfs/enel.pdf",
+    "password": "enel2025"
+  },
+  {
+    "id": "3-coracoes",
+    "pdf": "/pdfs/3-coracoes.pdf",
+    "password": "3-coracoes2025"
+  },
+  {
+    "id": "granfino",
+    "pdf": "/pdfs/granfino.pdf",
+    "password": "granfino2025"
+  },
+  {
+    "id": "ion",
+    "pdf": "/pdfs/ion.pdf",
+    "password": "ion2025"
+  },
+  {
+    "id": "granado",
+    "pdf": "/pdfs/granado.pdf",
+    "password": "granado2025"
+  },
+  {
+    "id": "riosul",
+    "pdf": "/pdfs/riosul.pdf",
+    "password": "riosul2025"
+  },
+  {
+    "id": "gol",
+    "pdf": "/pdfs/gol.pdf",
+    "password": "gol2025"
+  },
+  {
+    "id": "fairmont",
+    "pdf": "/pdfs/fairmont.pdf",
+    "password": "fairmont2025"
+  },
+  {
+    "id": "tyr",
+    "pdf": "/pdfs/tyr.pdf",
+    "password": "tyr2025"
+  },
+  {
+    "id": "sindrio",
+    "pdf": "/pdfs/sindrio.pdf",
+    "password": "sindrio2025"
+  },
+  {
+    "id": "rkf",
+    "pdf": "/pdfs/rkf.pdf",
+    "password": "rkf2025"
+  },
+  {
+    "id": "lanika",
+    "pdf": "/pdfs/lanika.pdf",
+    "password": "lanika2025"
+  },
+  {
+    "id": "radio-globo",
+    "pdf": "/pdfs/radio-globo.pdf",
+    "password": "radio-globo2025"
+  },
+  {
+    "id": "cbn",
+    "pdf": "/pdfs/cbn.pdf",
+    "password": "cbn2025"
+  },
+  {
+    "id": "eletromidia",
+    "pdf": "/pdfs/eletromidia.pdf",
+    "password": "eletromidia2025"
+  },
+  {
+    "id": "inpress",
+    "pdf": "/pdfs/inpress.pdf",
+    "password": "inpress2025"
+  },
+  {
+    "id": "oglobo",
+    "pdf": "/pdfs/oglobo.pdf",
+    "password": "oglobo2025"
+  },
+  {
+    "id": "brasil",
+    "pdf": "/pdfs/brasil.pdf",
+    "password": "brasil2025"
+  }
+]
