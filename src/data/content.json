@@ -781,5 +781,252 @@
         ]
       }
     ]
-  }
+  },
+  "protectedPdfs": [
+    {
+      "id": "rouanet",
+      "pdf": "rouanet.pdf",
+      "password": ""
+    },
+    {
+      "id": "fecomercio",
+      "pdf": "fecomercio.pdf",
+      "password": ""
+    },
+    {
+      "id": "gov-rio",
+      "pdf": "gov-rio.pdf",
+      "password": ""
+    },
+    {
+      "id": "pref-rio",
+      "pdf": "pref-rio.pdf",
+      "password": ""
+    },
+    {
+      "id": "naturgy",
+      "pdf": "naturgy.pdf",
+      "password": ""
+    },
+    {
+      "id": "bb-visa",
+      "pdf": "bb-visa.pdf",
+      "password": ""
+    },
+    {
+      "id": "visit-rio",
+      "pdf": "visit-rio.pdf",
+      "password": ""
+    },
+    {
+      "id": "rio-livro",
+      "pdf": "rio-livro.pdf",
+      "password": ""
+    },
+    {
+      "id": "stella",
+      "pdf": "stella.pdf",
+      "password": ""
+    },
+    {
+      "id": "maturatta",
+      "pdf": "maturatta.pdf",
+      "password": ""
+    },
+    {
+      "id": "iprio",
+      "pdf": "iprio.pdf",
+      "password": ""
+    },
+    {
+      "id": "ipiranga",
+      "pdf": "ipiranga.pdf",
+      "password": ""
+    },
+    {
+      "id": "rio-cultura",
+      "pdf": "rio-cultura.pdf",
+      "password": ""
+    },
+    {
+      "id": "secec",
+      "pdf": "secec.pdf",
+      "password": ""
+    },
+    {
+      "id": "setur",
+      "pdf": "setur.pdf",
+      "password": ""
+    },
+    {
+      "id": "rededor",
+      "pdf": "rededor.pdf",
+      "password": ""
+    },
+    {
+      "id": "prezunic",
+      "pdf": "prezunic.pdf",
+      "password": ""
+    },
+    {
+      "id": "garrafaria",
+      "pdf": "garrafaria.pdf",
+      "password": ""
+    },
+    {
+      "id": "pouso-alto",
+      "pdf": "pouso-alto.pdf",
+      "password": ""
+    },
+    {
+      "id": "chandon",
+      "pdf": "chandon.pdf",
+      "password": ""
+    },
+    {
+      "id": "andorinha",
+      "pdf": "andorinha.pdf",
+      "password": ""
+    },
+    {
+      "id": "president",
+      "pdf": "president.pdf",
+      "password": ""
+    },
+    {
+      "id": "cielo",
+      "pdf": "cielo.pdf",
+      "password": ""
+    },
+    {
+      "id": "britania",
+      "pdf": "britania.pdf",
+      "password": ""
+    },
+    {
+      "id": "seara",
+      "pdf": "seara.pdf",
+      "password": ""
+    },
+    {
+      "id": "amapa",
+      "pdf": "amapa.pdf",
+      "password": ""
+    },
+    {
+      "id": "sebrae",
+      "pdf": "sebrae.pdf",
+      "password": ""
+    },
+    {
+      "id": "tv-globo",
+      "pdf": "tv-globo.pdf",
+      "password": ""
+    },
+    {
+      "id": "alfa-cem",
+      "pdf": "alfa-cem.pdf",
+      "password": ""
+    },
+    {
+      "id": "embratur",
+      "pdf": "embratur.pdf",
+      "password": ""
+    },
+    {
+      "id": "sul-america",
+      "pdf": "sul-america.pdf",
+      "password": ""
+    },
+    {
+      "id": "enel",
+      "pdf": "enel.pdf",
+      "password": ""
+    },
+    {
+      "id": "3-coracoes",
+      "pdf": "3-coracoes.pdf",
+      "password": ""
+    },
+    {
+      "id": "granfino",
+      "pdf": "granfino.pdf",
+      "password": ""
+    },
+    {
+      "id": "ion",
+      "pdf": "ion.pdf",
+      "password": ""
+    },
+    {
+      "id": "granado",
+      "pdf": "granado.pdf",
+      "password": ""
+    },
+    {
+      "id": "riosul",
+      "pdf": "riosul.pdf",
+      "password": ""
+    },
+    {
+      "id": "gol",
+      "pdf": "gol.pdf",
+      "password": ""
+    },
+    {
+      "id": "fairmont",
+      "pdf": "fairmont.pdf",
+      "password": ""
+    },
+    {
+      "id": "tyr",
+      "pdf": "tyr.pdf",
+      "password": ""
+    },
+    {
+      "id": "sindrio",
+      "pdf": "sindrio.pdf",
+      "password": ""
+    },
+    {
+      "id": "rkf",
+      "pdf": "rkf.pdf",
+      "password": ""
+    },
+    {
+      "id": "lanika",
+      "pdf": "lanika.pdf",
+      "password": ""
+    },
+    {
+      "id": "radio-globo",
+      "pdf": "radio-globo.pdf",
+      "password": ""
+    },
+    {
+      "id": "cbn",
+      "pdf": "cbn.pdf",
+      "password": ""
+    },
+    {
+      "id": "eletromidia",
+      "pdf": "eletromidia.pdf",
+      "password": ""
+    },
+    {
+      "id": "inpress",
+      "pdf": "inpress.pdf",
+      "password": ""
+    },
+    {
+      "id": "oglobo",
+      "pdf": "oglobo.pdf",
+      "password": ""
+    },
+    {
+      "id": "brasil",
+      "pdf": "brasil.pdf",
+      "password": ""
+    }
+  ]
 }

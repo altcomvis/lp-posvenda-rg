@@ -11,7 +11,6 @@ export interface NumbersMetric {
 export interface AudienceItem {
 	icon: string;
 	title: string;
-	value: string;
 	description: string;
 }
 
@@ -24,6 +23,7 @@ export interface AwardData {
 
 export interface AuditoriumItem {
 	name: string;
+	capacity: string;
 	description: string;
 	images: string[];
 }
@@ -43,6 +43,23 @@ export interface MediaItem {
 export interface ShowItem {
 	name: string;
 	image: string;
+}
+
+export interface SponsorItem {
+	id: string;
+	name: string;
+}
+
+export interface SponsorBlock {
+	id: string;
+	label: string;
+	items: SponsorItem[];
+}
+
+export interface ProtectedPdf {
+	id: string;
+	pdf: string;
+	password: string;
 }
 
 export interface ContentData {
@@ -74,13 +91,14 @@ export interface ContentData {
 		items: AudienceItem[];
 	};
 	awards: AwardData;
+
+	// 🔥 AGORA ESTE BLOCO ESTÁ PERFEITO
 	auditoriums: {
 		id: string;
 		sectionTitle: string;
-		name: string;
-		description: string;
 		items: AuditoriumItem[];
 	};
+
 	establishments: {
 		id: string;
 		sectionTitle: string;
@@ -118,27 +136,13 @@ export interface ContentData {
 		items: MediaItem[];
 		images: string[];
 	};
+
 	sponsors: {
 		id: string;
 		sectionTitle: string;
-		rodapeImagem?: string;
 		blocks: SponsorBlock[];
 	};
-}
-export interface SponsorItem {
-	id: string;
-	name: string;
-	brandRef: string;
-}
 
-export interface SponsorBlock {
-	id: string;
-	label: string;
-	items: SponsorItem[];
-}
-
-export interface ProtectedPdf {
-	id: string;
-	pdf: string;
-	password: string;
+	// (Opcional) Se estiver usando protectedPdfs dentro do content.json
+	protectedPdfs?: ProtectedPdf[];
 }

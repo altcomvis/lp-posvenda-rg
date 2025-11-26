@@ -8,8 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 interface SponsorItem {
-	id: string; // ex: "fecomercio"
-	name: string; // ex: "fecomercio.webp"
+	id: string;
+	name: string;
+	pdf?: string;
+	password?: string;
 }
 
 interface SponsorBlock {
@@ -140,11 +142,11 @@ export default function SponsorsSection({ data, onChange }: Props) {
 								</Button>
 							</div>
 
-							<div className="space-y-2">
+							<div className="space-y-2 ">
 								{block.items.map((item, iIdx) => (
 									<div
 										key={iIdx}
-										className="border flex justify-between rounded p-3 gap-1 "
+										className="border flex justify-between rounded p-3 bg-white gap-1 "
 									>
 										<div className="space-y-4 w-full">
 											<Input
@@ -154,11 +156,28 @@ export default function SponsorsSection({ data, onChange }: Props) {
 													updateItem(bIdx, iIdx, { id: e.target.value })
 												}
 											/>
+
 											<Input
 												placeholder="Arquivo da logo (ex: fecomercio.webp)"
 												value={item.name}
 												onChange={(e) =>
 													updateItem(bIdx, iIdx, { name: e.target.value })
+												}
+											/>
+
+											<Input
+												placeholder="PDF (ex: fecomercio.pdf)"
+												value={item.pdf ?? ""}
+												onChange={(e) =>
+													updateItem(bIdx, iIdx, { pdf: e.target.value })
+												}
+											/>
+
+											<Input
+												placeholder="Senha"
+												value={item.password ?? ""}
+												onChange={(e) =>
+													updateItem(bIdx, iIdx, { password: e.target.value })
 												}
 											/>
 										</div>

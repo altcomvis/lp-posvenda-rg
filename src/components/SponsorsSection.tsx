@@ -24,7 +24,7 @@ export default function SponsorsSection() {
 				<div className="flex flex-wrap justify-center gap-16">
 					{sponsors.blocks.map((block: SponsorBlock) => (
 						<div key={block.id} className="flex flex-col items-center min-w-52">
-							{block.id !== "chancela-master" && (
+							{block.label && (
 								<div className="w-full pb-6 flex flex-col items-center">
 									<p className="text-center text-xs font-light text-neutral-700 mb-6 uppercase tracking-wide bg-white px-3 z-1">
 										{block.label}
@@ -33,14 +33,14 @@ export default function SponsorsSection() {
 								</div>
 							)}
 
-							<div className="flex justify-center gap-12 space-y-8 flex-wrap ">
+							<div className="flex justify-center gap-12 space-y-8 flex-wrap">
 								{block.items.map((item) => {
 									const pdfInfo = getPdfInfo(item.id);
 
 									return (
 										<div
 											key={item.id}
-											className="flex flex-col items-center justify-center gap-2"
+											className="flex flex-col items-center gap-2"
 										>
 											{pdfInfo ? (
 												<PasswordProtectedPDF
@@ -53,11 +53,10 @@ export default function SponsorsSection() {
 												<>
 													<img
 														src={`${import.meta.env.BASE_URL}img/marcas/${item.name}`}
+														className="object-contain opacity-40 h-14"
 														alt={item.id}
-														className="object-contain object-center opacity-40 md:h-auto h-14"
 													/>
-													{/* espaço reservado para manter altura igual */}
-													<span className="text-xs text-neutral-700 opacity-0 select-none">
+													<span className="text-xs opacity-0 select-none">
 														placeholder
 													</span>
 												</>
