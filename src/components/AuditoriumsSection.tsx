@@ -1,4 +1,3 @@
-import { useContent } from "@/hooks/useContent";
 import {
 	Carousel,
 	CarouselContent,
@@ -6,6 +5,7 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useContent } from "@/hooks/useContent";
 
 export default function AuditoriumsSection() {
 	const { content } = useContent();
@@ -14,20 +14,17 @@ export default function AuditoriumsSection() {
 	return (
 		<section id={auditoriums.id} className="w-full bg-amber-300 py-16">
 			<div className="w-10/12 mx-auto px-4">
-				<div className="grid gap-8 md:gap-36 lg:grid-cols-2">
-					<div className="">
-						<h1 className="text-3xl md:text-5xl font-title text-red-600 mb-10">
-							{auditoriums.sectionTitle}
-						</h1>
-						<h2 className="text-4xl text-indigo-950 font-title mb-2">
-							{auditoriums.name}
-						</h2>
-						<p className="text-sm text-neutral-700 mb-4">
-							{auditoriums.description}
-						</p>
-					</div>
+				<h1 className="text-3xl md:text-5xl font-title text-center text-red-600 mb-10">
+					{auditoriums.sectionTitle}
+				</h1>
+
+				<div className="grid md:grid-cols-2 gap-8 items-stretch ">
 					{auditoriums.items.map((item) => (
-						<div key={item.name}>
+						<div key={item.name} className="bg-indigo-950 p-10">
+							<h2 className="text-4xl text-white font-title mb-2">
+								{item.name}
+							</h2>
+							<p className="text-sm text-white mb-4">{item.description}</p>
 							<Carousel className="w-full">
 								<CarouselContent>
 									{item.images.map((src, idx) => (

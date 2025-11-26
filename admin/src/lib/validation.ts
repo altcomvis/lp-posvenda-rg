@@ -1,136 +1,59 @@
-// admin/src/lib/validation.ts
-
+// src/lib/validation.ts
 export interface ValidationResult {
 	valid: boolean;
 	errors: string[];
 }
 
+const REQUIRED_SECTIONS = [
+	"site",
+	"menu",
+	"hero",
+	"numbers",
+	"audience",
+	"awards",
+	"auditoriums",
+	"establishments",
+	"producers",
+	"kids",
+	"shows",
+	"activations",
+	"media",
+	"sponsors",
+];
+
 export function validateContent(data: any): ValidationResult {
 	const errors: string[] = [];
 
 	if (!data || typeof data !== "object") {
-		errors.push("O JSON raiz deve ser um objeto.");
+		errors.push("O conteúdo raiz não é um objeto JSON válido.");
 		return { valid: false, errors };
 	}
 
-	const ensure = (cond: boolean, msg: string) => {
-		if (!cond) errors.push(msg);
-	};
+	for (const section of REQUIRED_SECTIONS) {
+		if (!(section in data)) {
+			errors.push(`Seção obrigatória ausente: '${section}'.`);
+		}
+	}
 
-	// site
-	ensure(
-		typeof data.site === "object",
-		"A seção 'site' deve existir e ser um objeto.",
-	);
 	if (data.site) {
-		ensure(
-			typeof data.site.title === "string",
-			"site.title deve ser uma string.",
-		);
-		ensure(
-			typeof data.site.description === "string",
-			"site.description deve ser uma string.",
-		);
-		ensure(
-			typeof data.site.logoUrl === "string",
-			"site.logoUrl deve ser uma string.",
-		);
+		if (!data.site.title) errors.push("site.title é obrigatório.");
+		if (!data.site.description) errors.push("site.description é obrigatório.");
 	}
 
-	// hero
-	ensure(
-		typeof data.hero === "object",
-		"A seção 'hero' deve existir e ser um objeto.",
-	);
-	if (data.hero) {
-		ensure(typeof data.hero.id === "string", "hero.id deve ser uma string.");
-		ensure(
-			typeof data.hero.videoUrl === "string",
-			"hero.videoUrl deve ser uma string.",
-		);
-		ensure(
-			typeof data.hero.title === "string",
-			"hero.title deve ser uma string.",
-		);
+	if (data.menu && !Array.isArray(data.menu)) {
+		errors.push("menu deve ser um array.");
 	}
 
-	// numbers
-	ensure(
-		typeof data.numbers === "object",
-		"A seção 'numbers' deve existir e ser um objeto.",
-	);
-	if (data.numbers) {
-		ensure(
-			Array.isArray(data.numbers.metrics),
-			"numbers.metrics deve ser um array.",
-		);
+	if (data.hero && !data.hero.title) {
+		errors.push("hero.title é obrigatório.");
 	}
 
-	// audience
-	ensure(
-		typeof data.audience === "object",
-		"A seção 'audience' deve existir e ser um objeto.",
-	);
-	if (data.audience) {
-		ensure(
-			Array.isArray(data.audience.items),
-			"audience.items deve ser um array.",
-		);
+	if (data.numbers && !Array.isArray(data.numbers.metrics)) {
+		errors.push("numbers.metrics deve ser um array.");
 	}
 
-	// awards
-	ensure(
-		typeof data.awards === "object",
-		"A seção 'awards' deve existir e ser um objeto.",
-	);
-
-	// auditoriums
-	ensure(
-		typeof data.auditoriums === "object",
-		"A seção 'auditoriums' deve existir e ser um objeto.",
-	);
-
-	// establishments
-	ensure(
-		typeof data.establishments === "object",
-		"A seção 'establishments' deve existir e ser um objeto.",
-	);
-
-	// producers
-	ensure(
-		typeof data.producers === "object",
-		"A seção 'producers' deve existir e ser um objeto.",
-	);
-
-	// kids
-	ensure(
-		typeof data.kids === "object",
-		"A seção 'kids' deve existir e ser um objeto.",
-	);
-
-	// shows
-	ensure(
-		typeof data.shows === "object",
-		"A seção 'shows' deve existir e ser um objeto.",
-	);
-
-	// activations
-	ensure(
-		typeof data.activations === "object",
-		"A seção 'activations' deve existir e ser um objeto.",
-	);
-
-	// media
-	ensure(
-		typeof data.media === "object",
-		"A seção 'media' deve existir e ser um objeto.",
-	);
-
-	// sponsors
-	ensure(
-		typeof data.sponsors === "object",
-		"A seção 'sponsors' deve existir e ser um objeto.",
-	);
-
-	return { valid: errors.length === 0, errors };
+	return {
+		valid: errors.length === 0,
+		errors,
+	};
 }

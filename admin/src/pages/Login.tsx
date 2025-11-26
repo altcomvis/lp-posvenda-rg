@@ -1,61 +1,60 @@
+// src/pages/Login.tsx
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 interface LoginProps {
 	onAuthenticated: () => void;
-	onLoadContent: () => Promise<void>;
 }
 
-export default function Login({ onAuthenticated, onLoadContent }: LoginProps) {
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD ?? "rg2024";
+
+export default function Login({ onAuthenticated }: LoginProps) {
 	const [password, setPassword] = useState("");
-	const [error, setError] = useState("");
-	const navigate = useNavigate();
+	const [error, setError] = useState<string | null>(null);
 
-	const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "1234";
-
-	async function handleLogin() {
-		setError("");
-
-		if (password !== ADMIN_PASSWORD) {
-			setError("Senha incorreta.");
-			return;
+	function handleSubmit(e: React.FormEvent) {
+		e.preventDefault();
+		if (password === ADMIN_PASSWORD) {
+			setError(null);
+			onAuthenticated();
+		} else {
+			setError("Senha inválida.");
 		}
-
-		// Marca autenticado
-		localStorage.setItem("admin-auth", "true");
-		onAuthenticated();
-
-		// Carrega conteúdo automático
-		await onLoadContent();
-
-		// Vai para o painel
-		navigate("/admin");
 	}
 
 	return (
-		<div className="min-h-screen flex items-center justify-center bg-neutral-950 text-neutral-50">
-			<Card className="bg-neutral-900 border-neutral-800 w-full max-w-sm">
+		<div className="min-h-screen flex items-center justify-center p-4">
+			<Card className="w-full max-w-sm ">
 				<CardHeader>
-					<CardTitle className="text-center">Acesso Administrativo</CardTitle>
+					<CardTitle>Acesso ao Admin</CardTitle>
 				</CardHeader>
+				<CardContent>
+					<form onSubmit={handleSubmit} className="space-y-4">
+						<div className="space-y-1">
+							<Label className="text-xs uppercase tracking-wide text-neutral-500">
+								Senha
+							</Label>
+							<Input
+								type="password"
+								placeholder="Digite a senha do admin"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+							/>
+						</div>
 
-				<CardContent className="space-y-4">
-					<Input
-						type="password"
-						placeholder="Senha do Admin"
-						className="bg-neutral-800"
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-					/>
+						{error && (
+							<p className="text-xs text-red-400 border border-red-700 rounded p-2">
+								{error}
+							</p>
+						)}
 
-					{error && <p className="text-red-400 text-xs">{error}</p>}
-
-					<Button onClick={handleLogin} className="w-full bg-red-600">
-						Entrar
-					</Button>
+						<Button type="submit" className="w-full bg-red-600">
+							Entrar
+						</Button>
+					</form>
 				</CardContent>
 			</Card>
 		</div>

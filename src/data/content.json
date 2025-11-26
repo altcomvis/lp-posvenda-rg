@@ -125,8 +125,8 @@
     "items": [
       {
         "icon": "iconpbl1.png",
-        "title": "99",
-        "description": "Pontuação do NPS"
+        "title": "NPS",
+        "description": "Pontuação do NPS: 99"
       },
       {
         "icon": "iconpbl3.png",
@@ -135,18 +135,18 @@
       },
       {
         "icon": "iconpbl2.png",
-        "title": "67%",
-        "description": "Com graduação, pós-graduação ou mestrado/doutorado"
+        "title": "Escolaridade",
+        "description": "67% com graduação, pós-graduação ou mestrado/doutorado"
       },
       {
         "icon": "iconpbl5.png",
         "title": "Renda",
-        "description": "Entre 4 a 8 salários mínimos - 29% \n\n Acima de 10 salários mínimos - 14%"
+        "description": "Entre 4 a 8 salários mínimos - 29%\nAcima de 10 salários mínimos - 14%"
       },
       {
         "icon": "iconpbl6.png",
-        "title": "Perfil",
-        "description": "FEMININO - 65% \n MASCULINO - 34%"
+        "title": "Perfil de Gênero",
+        "description": "FEMININO - 65%\nMASCULINO - 34%"
       }
     ]
   },
@@ -167,10 +167,11 @@
   "auditoriums": {
     "id": "auditorios",
     "sectionTitle": "AUDITÓRIOS",
-    "name": "SENAC",
-    "description": "Com capacidade para 100 pessoas e curadoria da jornalista Luciana Fróes, o auditório SENAC reuniu grandes nomes do país para aulas concorridas, cheias de dicas e conteúdos incríveis.",
     "items": [
       {
+        "name": "SENAC",
+        "capacity": "100 pessoas",
+        "description": "Com capacidade para 100 pessoas e curadoria da jornalista Luciana Fróes, o auditório SENAC reuniu grandes nomes do país para aulas concorridas, cheias de dicas e conteúdos incríveis.",
         "images": [
           "senac1.png",
           "senac2.png",
@@ -178,6 +179,19 @@
           "senac4.png",
           "senac5.png",
           "senac6.png"
+        ]
+      },
+      {
+        "name": "SANTANDER",
+        "capacity": "50 pessoas",
+        "description": "Com capacidade para 50 pessoas e curadoria da jornalista Luciana Fróes, o auditório Santander promoveu um grande encontro com chefs de todo o país e uma variedade de trocas e experiências sobre a gastronomia.",
+        "images": [
+          "santander1.png",
+          "santander2.png",
+          "santander3.png",
+          "santander4.png",
+          "santander5.png",
+          "santander6.png"
         ]
       }
     ]
@@ -464,7 +478,7 @@
     "blocks": [
       {
         "id": "chancela-master",
-        "label": "",
+        "label": "Chancela Master",
         "items": [
           {
             "id": "rouanet",

@@ -1,29 +1,28 @@
-import { useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+// src/App.tsx
+import { useEffect, useState } from "react";
+import { AppSidebar } from "@/components/app-sidebar";
+import JsonStatus from "@/components/JsonStatus";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Textarea } from "@/components/ui/textarea";
-import { type ValidationResult, validateContent } from "@/lib/validation";
+// Sidebar
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { loadContent, saveContent } from "@/lib/github";
+import { validateContent } from "@/lib/validation";
 import Login from "@/pages/Login";
-
-// CONFIG
-const OWNER = "SEU_USUARIO";
-const REPO = "lp-posvenda-rg";
-const BRANCH = "main";
-const FILE_PATH = "content.json";
-
-const RAW_URL = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${FILE_PATH}`;
-const API_URL = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`;
-
-// Token vindo do .env
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_PAT;
-
-// Base64 UTF-8
-function encodeBase64(str: string): string {
-	return btoa(unescape(encodeURIComponent(str)));
-}
+import ActivationsSection from "@/sections/ActivationsSection";
+import AudienceSection from "@/sections/AudienceSection";
+import AuditoriumsSection from "@/sections/AuditoriumsSection";
+import AwardsSection from "@/sections/AwardsSection";
+import EstablishmentsSection from "@/sections/EstablishmentsSection";
+import HeroSection from "@/sections/HeroSection";
+import KidsSection from "@/sections/KidsSection";
+import MediaSection from "@/sections/MediaSection";
+import MenuSection from "@/sections/MenuSection";
+import NumbersSection from "@/sections/NumbersSection";
+import ProducersSection from "@/sections/ProducersSection";
+import ShowsSection from "@/sections/ShowsSection";
+import SiteSection from "@/sections/SiteSection";
+import SponsorsSection from "@/sections/SponsorsSection";
+import { Badge } from "./components/ui/badge";
 
 const SECTION_LABELS: Record<string, string> = {
 	site: "Site",
@@ -35,7 +34,7 @@ const SECTION_LABELS: Record<string, string> = {
 	auditoriums: "Auditórios",
 	establishments: "Estabelecimentos",
 	producers: "Produtores",
-	kids: "Infantil",
+	kids: "Kids",
 	shows: "Shows",
 	activations: "Ativações",
 	media: "Divulgação",
@@ -47,194 +46,51 @@ export default function App() {
 		localStorage.getItem("admin-auth") === "true",
 	);
 
-	const [fullJson, setFullJson] = useState<any | null>(null);
-	const [sectionTexts, setSectionTexts] = useState<Record<string, string>>({});
-	const [activeTab, setActiveTab] = useState("overview");
+	const [content, setContent] = useState<any | null>(null);
+	const [activeSection, setActiveSection] = useState<string>("overview");
 
-	const [saving, setSaving] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const [saving, setSaving] = useState(false);
+
+	const [validation, setValidation] = useState({
+		valid: true,
+		errors: [] as string[],
+	});
 
 	const [message, setMessage] = useState<string | null>(null);
 	const [error, setError] = useState<string | null>(null);
 
-	const [validation, setValidation] = useState<ValidationResult>({
-		valid: true,
-		errors: [],
-	});
-
-	// ROTAS -----------------------------------------------
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		if (authenticated && !content) {
+			handleLoad();
+		}
+	}, [authenticated]);
 
 	if (!authenticated) {
 		return (
-			<Routes>
-				<Route
-					path="*"
-					element={
-						<Login
-							onAuthenticated={() => setAuthenticated(true)}
-							onLoadContent={handleLoad}
-						/>
-					}
-				/>
-			</Routes>
+			<Login
+				onAuthenticated={() => {
+					localStorage.setItem("admin-auth", "true");
+					setAuthenticated(true);
+				}}
+			/>
 		);
 	}
 
-	return (
-		<Routes>
-			<Route path="/admin" element={renderAdmin()} />
-			<Route path="*" element={<Navigate to="/admin" replace />} />
-		</Routes>
-	);
-
-	// RENDER ADMIN ----------------------------------------
-
-	function renderAdmin() {
-		return (
-			<div className="min-h-screen bg-neutral-950 text-neutral-50 p-6">
-				<header className="flex justify-between mb-6 border-b border-red-900/40 pb-3">
-					<h1 className="text-xl md:text-3xl font-bold text-red-500">
-						Admin – Rio Gastronomia
-					</h1>
-
-					<Button variant="outline" onClick={handleLoad} disabled={loading}>
-						{loading ? "Carregando..." : "Recarregar"}
-					</Button>
-				</header>
-
-				{message && (
-					<p className="text-emerald-400 border border-emerald-700 p-2 mb-4 rounded text-xs">
-						{message}
-					</p>
-				)}
-				{error && (
-					<p className="text-red-400 border border-red-700 p-2 mb-4 rounded text-xs">
-						{error}
-					</p>
-				)}
-
-				{!fullJson ? renderPlaceholder() : renderTabs()}
-			</div>
-		);
-	}
-
-	// PLACEHOLDER
-	function renderPlaceholder() {
-		return (
-			<Card className="bg-neutral-900 border-neutral-800">
-				<CardHeader>
-					<CardTitle>Aguardando carregamento</CardTitle>
-				</CardHeader>
-				<CardContent>
-					Clique em “Recarregar” para carregar o conteúdo do GitHub.
-				</CardContent>
-			</Card>
-		);
-	}
-
-	// TABS
-	function renderTabs() {
-		const sections = Object.keys(fullJson || {});
-
-		return (
-			<Tabs value={activeTab} onValueChange={setActiveTab}>
-				<TabsList className="bg-neutral-900 border border-neutral-800 flex flex-wrap">
-					<TabsTrigger value="overview">Visão Geral</TabsTrigger>
-					{sections.map((s) => (
-						<TabsTrigger key={s} value={s}>
-							{SECTION_LABELS[s] ?? s}
-						</TabsTrigger>
-					))}
-				</TabsList>
-
-				{/* OVERVIEW */}
-				<TabsContent value="overview" className="mt-4">
-					<Card className="bg-neutral-900 border-neutral-800">
-						<CardHeader>
-							<CardTitle>Estado do JSON</CardTitle>
-						</CardHeader>
-						<CardContent className="space-y-4">
-							{validation.valid ? (
-								<p className="text-emerald-400 text-sm">Estrutura válida</p>
-							) : (
-								<div className="text-red-400 text-sm">
-									<p>Erros:</p>
-									<ul className="text-xs list-disc ml-4 mt-1">
-										{validation.errors.map((e, i) => (
-											<li key={i}>{e}</li>
-										))}
-									</ul>
-								</div>
-							)}
-
-							<Button
-								className="bg-red-600"
-								onClick={handleSaveAll}
-								disabled={saving}
-							>
-								{saving ? "Salvando..." : "Salvar tudo no GitHub"}
-							</Button>
-						</CardContent>
-					</Card>
-				</TabsContent>
-
-				{/* SEÇÕES */}
-				{sections.map((section) => (
-					<TabsContent key={section} value={section} className="mt-4">
-						<Card className="bg-neutral-900 border-neutral-800">
-							<CardHeader>
-								<CardTitle>{SECTION_LABELS[section] ?? section}</CardTitle>
-							</CardHeader>
-
-							<CardContent className="space-y-3">
-								<ScrollArea className="h-[400px] border border-neutral-800">
-									<Textarea
-										className="h-full bg-neutral-950 text-xs font-mono"
-										value={sectionTexts[section]}
-										onChange={(e) =>
-											setSectionTexts((prev) => ({
-												...prev,
-												[section]: e.target.value,
-											}))
-										}
-									/>
-								</ScrollArea>
-
-								<Button
-									variant="outline"
-									onClick={() => handleApplySection(section)}
-								>
-									Aplicar alterações
-								</Button>
-							</CardContent>
-						</Card>
-					</TabsContent>
-				))}
-			</Tabs>
-		);
-	}
-
-	// LOGIC: LOAD JSON
 	async function handleLoad() {
 		setLoading(true);
 		setError(null);
 		setMessage(null);
 
 		try {
-			const res = await fetch(RAW_URL);
-			if (!res.ok) throw new Error("Erro ao carregar conteúdo.");
+			const data = await loadContent();
+			setContent(data);
 
-			const json = await res.json();
-			setFullJson(json);
+			const validationResult = validateContent(data);
+			setValidation(validationResult);
 
-			const texts: Record<string, string> = {};
-			for (const key of Object.keys(json)) {
-				texts[key] = JSON.stringify(json[key], null, 2);
-			}
-			setSectionTexts(texts);
-
-			setValidation(validateContent(json));
-			setMessage("Conteúdo carregado.");
+			setMessage("Conteúdo carregado com sucesso.");
 		} catch (err: any) {
 			setError(err.message);
 		} finally {
@@ -242,69 +98,145 @@ export default function App() {
 		}
 	}
 
-	// LOGIC: APPLY SECTION
-	function handleApplySection(section: string) {
-		try {
-			const parsed = JSON.parse(sectionTexts[section]);
-
-			const newJson = { ...fullJson, [section]: parsed };
-			setFullJson(newJson);
-
-			setValidation(validateContent(newJson));
-			setMessage(`Seção '${section}' atualizada.`);
-		} catch {
-			setError(`JSON inválido em '${section}'.`);
-		}
-	}
-
-	// LOGIC: SAVE TO GITHUB
-	async function handleSaveAll() {
+	async function handleSave() {
 		if (!validation.valid) {
-			setError("Estrutura inválida. Corrija antes de salvar.");
+			setError("JSON inválido. Corrija antes de salvar.");
 			return;
 		}
 
 		setSaving(true);
+		setMessage(null);
+		setError(null);
 
 		try {
-			// Obter SHA
-			const getRes = await fetch(API_URL, {
-				headers: {
-					Authorization: `Bearer ${GITHUB_TOKEN}`,
-					Accept: "application/vnd.github+json",
-				},
-			});
-			if (!getRes.ok) throw new Error("Erro ao buscar SHA.");
-
-			const file = await getRes.json();
-			const sha = file.sha;
-
-			// Criar conteúdo final
-			const newContent = JSON.stringify(fullJson, null, 2);
-
-			// Enviar para GitHub
-			const putRes = await fetch(API_URL, {
-				method: "PUT",
-				headers: {
-					Authorization: `Bearer ${GITHUB_TOKEN}`,
-					Accept: "application/vnd.github+json",
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					message: "Atualização via Admin",
-					content: encodeBase64(newContent),
-					sha,
-					branch: BRANCH,
-				}),
-			});
-
-			if (!putRes.ok) throw new Error("Erro ao salvar no GitHub.");
-
-			setMessage("Conteúdo salvo com sucesso!");
+			await saveContent(content);
+			setMessage("Conteúdo salvo no GitHub com sucesso.");
 		} catch (err: any) {
 			setError(err.message);
 		} finally {
 			setSaving(false);
 		}
 	}
+
+	function update(section: string) {
+		return (newValue: any) => {
+			const updated = { ...content, [section]: newValue };
+			setContent(updated);
+			setValidation(validateContent(updated));
+		};
+	}
+
+	function renderSection() {
+		if (!content) return null;
+
+		switch (activeSection) {
+			case "site":
+				return <SiteSection data={content.site} onChange={update("site")} />;
+
+			case "menu":
+				return <MenuSection data={content.menu} onChange={update("menu")} />;
+
+			case "hero":
+				return <HeroSection data={content.hero} onChange={update("hero")} />;
+
+			case "numbers":
+				return (
+					<NumbersSection data={content.numbers} onChange={update("numbers")} />
+				);
+
+			case "audience":
+				return (
+					<AudienceSection
+						data={content.audience}
+						onChange={update("audience")}
+					/>
+				);
+
+			case "awards":
+				return (
+					<AwardsSection data={content.awards} onChange={update("awards")} />
+				);
+
+			case "auditoriums":
+				return (
+					<AuditoriumsSection
+						data={content.auditoriums}
+						onChange={update("auditoriums")}
+					/>
+				);
+
+			case "establishments":
+				return (
+					<EstablishmentsSection
+						data={content.establishments}
+						onChange={update("establishments")}
+					/>
+				);
+
+			case "producers":
+				return (
+					<ProducersSection
+						data={content.producers}
+						onChange={update("producers")}
+					/>
+				);
+
+			case "kids":
+				return <KidsSection data={content.kids} onChange={update("kids")} />;
+
+			case "shows":
+				return <ShowsSection data={content.shows} onChange={update("shows")} />;
+
+			case "activations":
+				return (
+					<ActivationsSection
+						data={content.activations}
+						onChange={update("activations")}
+					/>
+				);
+
+			case "media":
+				return <MediaSection data={content.media} onChange={update("media")} />;
+
+			case "sponsors":
+				return (
+					<SponsorsSection
+						data={content.sponsors}
+						onChange={update("sponsors")}
+					/>
+				);
+		}
+	}
+
+	return (
+		<SidebarProvider>
+			<AppSidebar
+				active={activeSection}
+				setActive={setActiveSection}
+				sections={SECTION_LABELS}
+				onSave={handleSave}
+				saving={saving}
+				validation={validation}
+			/>
+
+			<main className="w-full ">
+				<header className="flex justify-between mb-4 p-4 bg-sidebar">
+					<SidebarTrigger />
+					<h1 className="text-xl md:text-3xl font-bold text-neutral-500">
+						Admin | Pós Venda Rio Gastronomia
+					</h1>
+
+					<Button variant="outline" onClick={handleLoad} disabled={loading}>
+						{loading ? "Carregando..." : "Recarregar"}
+					</Button>
+				</header>
+
+				<div className="pl-6">
+					{message && <Badge variant="secondary">{message}</Badge>}
+					{error && <Badge variant="destructive">{error}</Badge>}
+				</div>
+				<div className="p-6">{renderSection()}</div>
+			</main>
+		</SidebarProvider>
+	);
 }
